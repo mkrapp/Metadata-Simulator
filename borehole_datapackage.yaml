@@ -1,0 +1,46 @@
+name: borehole_data
+title: Borehole Data
+description: |
+  A dataset containing information about boreholes, including their ID, location, depth, date drilled, and driller.
+  This dataset is intended for geological studies and analysis.
+
+version: '1.0'
+keywords:
+  - borehole
+  - geology
+  - drilling
+homepage: https://example.com/borehole-data
+licenses:
+  - name: Open Data Commons Public Domain Dedication and License (PDDL)
+    path: https://opendatacommons.org/licenses/pddl/
+resources:
+  - name: boreholes
+    path: raw-data/borehole_data.csv
+    format: csv
+    profile: tabular-data-resource
+    schema:
+      fields:
+        - name: BoreholeID
+          type: string
+          description: Unique identifier for the borehole
+        - name: Location
+          type: string
+          description: Geographic location of the borehole
+        - name: Depth
+          type: number
+          description: Depth of the borehole in meters
+        - name: DateDrilled
+          type: date
+          description: Date when the borehole was drilled
+        - name: Driller
+          type: string
+          description: Name of the person who drilled the borehole
+      primaryKey: BoreholeID
+      missingValues: ['']
+      foreignKeys: []
+      uniqueKey: BoreholeID
+    format: csv
+    encoding: utf-8
+    mediatype: text/csv
+    size: 123456
+    last_modified: 2024-09-01
