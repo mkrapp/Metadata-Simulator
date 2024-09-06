@@ -1,0 +1,10 @@
+name: metadata
+channels:
+  - conda-forge
+dependencies:
+  - frictionless
+  - geopandas
+  - numpy
+  - pandas
+  - shapely
+  - yaml
