@@ -44,10 +44,11 @@ Here's how the Markdown table from the generated file `summary_report.md` (`cat 
 
 | Project         | Define the Scope of Data   | Choose Open Data Formats   | Ensure FAIR Principles   | Document Metadata and Provenance   | Review and Validate Data   | Publish and Share Data   | Periodic Review and Updates   | Metadata File Check   |
 |:----------------|:---------------------------|:---------------------------|:-------------------------|:-----------------------------------|:---------------------------|:-------------------------|:------------------------------|:----------------------|
-| rock_types      | Not Completed              | Not Completed              | Not Completed            | Not Completed                      | Not Completed              | Not Completed            | Not Completed                 | Failed                |
-| pm25_timeseries | Not Completed              | Not Completed              | Not Completed            | Not Completed                      | Not Completed              | Not Completed            | Not Completed                 | Failed                |
-| borehole_data   | Not Completed              | Not Completed              | Not Completed            | Not Completed                      | Not Completed              | Not Completed            | Not Completed                 | Failed                |
-| fossil_records  | Not Completed              | Not Completed              | Not Completed            | Not Completed                      | Not Completed              | Not Completed            | Not Completed                 | Failed                |
+| rock_types      | ✘                          | ✘                          | ✘                        | ✘                                  | ✘                          | ✘                        | ✘                             | Failed                |
+| pm25_timeseries | ✘                          | ✘                          | ✘                        | ✘                                  | ✘                          | ✘                        | ✘                             | Failed                |
+| borehole_data   | ✘                          | ✘                          | ✘                        | ✘                                  | ✘                          | ✘                        | ✘                             | Failed                |
+| fossil_records  | ✘                          | ✘                          | ✘                        | ✘                                  | ✘                          | ✘                        | ✘                             | Failed                |
+
 
 ## Update the `borehole_data` project
 
@@ -67,10 +68,10 @@ to generate `summary_report.md`:
 
 | Project         | Define the Scope of Data   | Choose Open Data Formats   | Ensure FAIR Principles   | Document Metadata and Provenance   | Review and Validate Data   | Publish and Share Data   | Periodic Review and Updates   | Metadata File Check   |
 |:----------------|:---------------------------|:---------------------------|:-------------------------|:-----------------------------------|:---------------------------|:-------------------------|:------------------------------|:----------------------|
-| rock_types      | Not Completed              | Not Completed              | Not Completed            | Not Completed                      | Not Completed              | Not Completed            | Not Completed                 | Failed                |
-| pm25_timeseries | Not Completed              | Not Completed              | Not Completed            | Not Completed                      | Not Completed              | Not Completed            | Not Completed                 | Failed                |
-| borehole_data   | Completed                  | Completed                  | Not Completed            | Completed                          | Completed                  | Completed                | Completed                     | Passed               |
-| fossil_records  | Not Completed              | Not Completed              | Not Completed            | Not Completed                      | Not Completed              | Not Completed            | Not Completed                 | Failed                |
+| rock_types      | ✘                          | ✘                          | ✘                        | ✘                                  | ✘                          | ✘                        | ✘                             | Failed                |
+| pm25_timeseries | ✘                          | ✘                          | ✘                        | ✘                                  | ✘                          | ✘                        | ✘                             | Failed                |
+| borehole_data   | ✔                          | ✔                          | ✔                        | ✔                                  | ✔                          | ✔                        | ✔                             | Passed                |
+| fossil_records  | ✘                          | ✘                          | ✘                        | ✘                                  | ✘                          | ✘                        | ✘                             | Failed                |
 
 ## Add missing metadata for the `bore_data` project
 
@@ -132,10 +133,10 @@ to generate `summary_report.md`:
 
 | Project         | Define the Scope of Data   | Choose Open Data Formats   | Ensure FAIR Principles   | Document Metadata and Provenance   | Review and Validate Data   | Publish and Share Data   | Periodic Review and Updates   | Metadata File Check   |
 |:----------------|:---------------------------|:---------------------------|:-------------------------|:-----------------------------------|:---------------------------|:-------------------------|:------------------------------|:----------------------|
-| rock_types      | Not Completed              | Not Completed              | Not Completed            | Not Completed                      | Not Completed              | Not Completed            | Not Completed                 | Failed                |
-| pm25_timeseries | Not Completed              | Not Completed              | Not Completed            | Not Completed                      | Not Completed              | Not Completed            | Not Completed                 | Failed                |
-| borehole_data   | Completed                  | Completed                  | Completed                | Completed                          | Completed                  | Completed                | Completed                     | Passed               |
-| fossil_records  | Not Completed              | Not Completed              | Not Completed            | Not Completed                      | Not Completed              | Not Completed            | Not Completed                 | Failed                |
+| rock_types      | ✘                          | ✘                          | ✘                        | ✘                                  | ✘                          | ✘                        | ✘                             | Failed                |
+| pm25_timeseries | ✘                          | ✘                          | ✘                        | ✘                                  | ✘                          | ✘                        | ✘                             | Failed                |
+| borehole_data   | ✔                          | ✔                          | ✔                        | ✔                                  | ✔                          | ✔                        | ✔                             | Passed                |
+| fossil_records  | ✘                          | ✘                          | ✘                        | ✘                                  | ✘                          | ✘                        | ✘                             | Failed                |
 
 All entries are now complete for the `borehole_data` project. Mission accomplished.
 

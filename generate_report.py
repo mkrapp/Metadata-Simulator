@@ -3,6 +3,11 @@ import pandas as pd
 import yaml
 from frictionless import Package, validate
 
+completed = "Completed"
+completed = "✔"
+not_completed = "Not Completed"
+not_completed = "✘"
+
 # Define paths for each project
 projects = {
         'rock_types': 'data_projects/rock_types',
@@ -27,7 +32,7 @@ def check_action_items(project_name, project_path):
     raw_data_folder = os.path.join(project_path, 'raw-data')
 
     # Initialize results
-    results = {action: 'Not Completed' for action in checklist}
+    results = {action: not_completed for action in checklist}
 
     if os.path.exists(metadata_file):
         # Load Data Package metadata
@@ -35,23 +40,23 @@ def check_action_items(project_name, project_path):
             metadata = yaml.safe_load(file)
 
         # Check if the dataset is defined and open formats are used
-        results['Define the Scope of Data'] = 'Completed' if metadata.get('resources') else 'Not Completed'
-        results['Choose Open Data Formats'] = 'Completed' if all(resource.get('format') in ['csv', 'geojson'] for resource in metadata.get('resources', [])) else 'Not Completed'
+        results['Define the Scope of Data'] = completed if metadata.get('resources') else not_completed
+        results['Choose Open Data Formats'] = completed if all(resource.get('format') in ['csv', 'geojson'] for resource in metadata.get('resources', [])) else not_completed
 
         # Ensure FAIR Principles
-        results['Ensure FAIR Principles'] = 'Completed' if validate_fair_principles(metadata) else 'Not Completed'
+        results['Ensure FAIR Principles'] = completed if validate_fair_principles(metadata) else not_completed
 
         # Document Metadata and Provenance
-        results['Document Metadata and Provenance'] = 'Completed' if 'description' in metadata and 'schema' in metadata.get('resources', [{}])[0] else 'Not Completed'
+        results['Document Metadata and Provenance'] = completed if 'description' in metadata and 'schema' in metadata.get('resources', [{}])[0] else not_completed
 
         # Review and Validate Data
-        results['Review and Validate Data'] = 'Completed' if validate_data(raw_data_folder) else 'Not Completed'
+        results['Review and Validate Data'] = completed if validate_data(raw_data_folder) else not_completed
 
         # Publish and Share Data
-        results['Publish and Share Data'] = 'Completed'  # Assumed always completed for this example
+        results['Publish and Share Data'] = completed  # Assumed always completed for this example
 
         # Periodic Review and Updates
-        results['Periodic Review and Updates'] = 'Completed'  # Assumed always completed for this example
+        results['Periodic Review and Updates'] = completed  # Assumed always completed for this example
 
         results['Metadata File Check'] = 'Passed'
     else:
