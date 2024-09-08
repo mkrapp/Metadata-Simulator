@@ -1,6 +1,6 @@
-# Metadata-Simulator
+# RDM-Simulator
 
-Generate a set of dummy data projects and create a summary report.
+RDM (Research Data Management) simulator generates a set of dummy data projects and create a summary report.
 
 # What? Why?
 
